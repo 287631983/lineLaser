@@ -26,180 +26,36 @@ Project File Date:  02/08/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
-Build target 'ld07_cali'
-compiling hw_config.c...
-..\Middlewares\STM32_EVAL\STM3210E_EVAL\stm3210e_eval.h(374): error:  #20: identifier "USART_InitTypeDef" is undefined
-  void STM_EVAL_COMInit(COM_TypeDef COM, USART_InitTypeDef* USART_InitStruct);
-..\Src\hw_config.c(56): error:  #20: identifier "EXTI_InitTypeDef" is undefined
-  EXTI_InitTypeDef EXTI_InitStructure;
-..\Src\hw_config.c(82): error:  #20: identifier "GPIO_InitTypeDef" is undefined
-    GPIO_InitTypeDef  GPIO_InitStructure;
-..\Src\hw_config.c(100): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
-..\Src\hw_config.c(100): error:  #20: identifier "RCC_APB2Periph_GPIOA" is undefined
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
-..\Src\hw_config.c(121): error:  #20: identifier "GPIO_Pin_11" is undefined
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_11 | GPIO_Pin_12;
-..\Src\hw_config.c(121): error:  #20: identifier "GPIO_Pin_12" is undefined
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_11 | GPIO_Pin_12;
-..\Src\hw_config.c(122): error:  #20: identifier "GPIO_Speed_50MHz" is undefined
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-..\Src\hw_config.c(123): error:  #20: identifier "GPIO_Mode_AF_PP" is undefined
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-..\Src\hw_config.c(124): warning:  #223-D: function "GPIO_Init" declared implicitly
-    GPIO_Init(GPIOA, &GPIO_InitStructure);
-..\Src\hw_config.c(127): error:  #20: identifier "RCC_APB2Periph_GPIOB" is undefined
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_ALLGPIO, ENABLE);
-..\Src\hw_config.c(127): error:  #20: identifier "RCC_APB2Periph_GPIOC" is undefined
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_ALLGPIO, ENABLE);
-..\Src\hw_config.c(127): error:  #20: identifier "RCC_APB2Periph_GPIOD" is undefined
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_ALLGPIO, ENABLE);
-..\Src\hw_config.c(127): error:  #20: identifier "RCC_APB2Periph_GPIOE" is undefined
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_ALLGPIO, ENABLE);
-..\Src\hw_config.c(156): error:  #20: identifier "GPIO_Pin_14" is undefined
-    GPIO_InitStructure.GPIO_Pin = USB_DISCONNECT_PIN;
-..\Src\hw_config.c(158): error:  #20: identifier "GPIO_Mode_Out_OD" is undefined
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_OD;
-..\Src\hw_config.c(234): warning:  #223-D: function "RCC_USBCLKConfig" declared implicitly
-    RCC_USBCLKConfig(RCC_USBCLKSource_PLLCLK_1Div5);
-..\Src\hw_config.c(234): error:  #20: identifier "RCC_USBCLKSource_PLLCLK_1Div5" is undefined
-    RCC_USBCLKConfig(RCC_USBCLKSource_PLLCLK_1Div5);
-..\Src\hw_config.c(237): warning:  #223-D: function "RCC_APB1PeriphClockCmd" declared implicitly
-    RCC_APB1PeriphClockCmd(RCC_APB1Periph_USB, ENABLE);
-..\Src\hw_config.c(237): error:  #20: identifier "RCC_APB1Periph_USB" is undefined
-    RCC_APB1PeriphClockCmd(RCC_APB1Periph_USB, ENABLE);
-..\Src\hw_config.c(273): error:  #20: identifier "NVIC_InitTypeDef" is undefined
-    NVIC_InitTypeDef NVIC_InitStructure; 
-..\Src\hw_config.c(276): warning:  #223-D: function "NVIC_PriorityGroupConfig" declared implicitly
-    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);  
-..\Src\hw_config.c(276): error:  #20: identifier "NVIC_PriorityGroup_2" is undefined
-    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);  
-..\Src\hw_config.c(310): warning:  #223-D: function "NVIC_Init" declared implicitly
-    NVIC_Init(&NVIC_InitStructure);
-..\Src\hw_config.c(349): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
-      GPIO_ResetBits(USB_DISCONNECT, USB_DISCONNECT_PIN);
-..\Src\hw_config.c(349): error:  #20: identifier "GPIO_Pin_14" is undefined
-      GPIO_ResetBits(USB_DISCONNECT, USB_DISCONNECT_PIN);
-..\Src\hw_config.c(353): warning:  #223-D: function "GPIO_SetBits" declared implicitly
-      GPIO_SetBits(USB_DISCONNECT, USB_DISCONNECT_PIN);
-..\Src\hw_config.c(353): error:  #20: identifier "GPIO_Pin_14" is undefined
-      GPIO_SetBits(USB_DISCONNECT, USB_DISCONNECT_PIN);
-..\Src\hw_config.c: 8 warnings, 20 errors
+Rebuild target 'ld07_cali'
+assembling startup_stm32f103xb.s...
 compiling stm32f1xx_hal_gpio_ex.c...
+compiling stm32f1xx_it.c...
+compiling main.c...
 compiling stm32f1xx_hal_msp.c...
 compiling tim.c...
 compiling control.c...
-compiling stm32f1xx_it.c...
-compiling main.c...
 compiling stm32f1xx_hal_pcd.c...
 compiling stm32f1xx_hal.c...
-compiling stm32f1xx_hal_pcd_ex.c...
 compiling stm32f1xx_hal_rcc_ex.c...
+compiling stm32f1xx_hal_pcd_ex.c...
+compiling stm32f1xx_hal_gpio.c...
 compiling stm32f1xx_hal_dma.c...
 compiling stm32f1xx_hal_rcc.c...
-compiling stm32f1xx_hal_gpio.c...
 compiling stm32f1xx_ll_usb.c...
-compiling stm32f1xx_hal_cortex.c...
-compiling stm32f1xx_hal_exti.c...
-compiling stm32f1xx_hal_flash_ex.c...
 compiling stm32f1xx_hal_flash.c...
 compiling stm32f1xx_hal_pwr.c...
+compiling stm32f1xx_hal_cortex.c...
+compiling stm32f1xx_hal_flash_ex.c...
+compiling stm32f1xx_hal_exti.c...
 compiling stm32f1xx_hal_tim_ex.c...
 compiling pro_v2.c...
-compiling usb_desc.c...
-..\Middlewares\STM32_EVAL\STM3210E_EVAL\stm3210e_eval.h(374): error:  #20: identifier "USART_InitTypeDef" is undefined
-  void STM_EVAL_COMInit(COM_TypeDef COM, USART_InitTypeDef* USART_InitStruct);
-..\Src\usb_desc.c: 0 warnings, 1 error
-compiling usb_endp.c...
-..\Middlewares\STM32_EVAL\STM3210E_EVAL\stm3210e_eval.h(374): error:  #20: identifier "USART_InitTypeDef" is undefined
-  void STM_EVAL_COMInit(COM_TypeDef COM, USART_InitTypeDef* USART_InitStruct);
-..\Src\usb_endp.c: 0 warnings, 1 error
 compiling stm32f1xx_hal_tim.c...
-compiling usb_istr.c...
-..\Middlewares\STM32_EVAL\STM3210E_EVAL\stm3210e_eval.h(374): error:  #20: identifier "USART_InitTypeDef" is undefined
-  void STM_EVAL_COMInit(COM_TypeDef COM, USART_InitTypeDef* USART_InitStruct);
-..\Src\usb_istr.c: 0 warnings, 1 error
-compiling usb_prop.c...
-..\Middlewares\STM32_EVAL\STM3210E_EVAL\stm3210e_eval.h(374): error:  #20: identifier "USART_InitTypeDef" is undefined
-  void STM_EVAL_COMInit(COM_TypeDef COM, USART_InitTypeDef* USART_InitStruct);
-..\Src\usb_prop.c: 0 warnings, 1 error
-compiling usb_pwr.c...
-..\Middlewares\STM32_EVAL\STM3210E_EVAL\stm3210e_eval.h(374): error:  #20: identifier "USART_InitTypeDef" is undefined
-  void STM_EVAL_COMInit(COM_TypeDef COM, USART_InitTypeDef* USART_InitStruct);
-..\Src\usb_pwr.c: 0 warnings, 1 error
-compiling virtualComPort.c...
-..\Middlewares\STM32_EVAL\STM3210E_EVAL\stm3210e_eval.h(374): error:  #20: identifier "USART_InitTypeDef" is undefined
-  void STM_EVAL_COMInit(COM_TypeDef COM, USART_InitTypeDef* USART_InitStruct);
-..\Src\virtualComPort.c(49): error:  #20: identifier "USART_InitTypeDef" is undefined
-  USART_InitTypeDef USART_InitStructure;
-..\Src\virtualComPort.c(50): error:  #20: identifier "DMA_InitTypeDef" is undefined
-  extern DMA_InitTypeDef  DMA_InitStructure;
-..\Src\virtualComPort.c(247): error:  #20: identifier "USART_InitTypeDef" is undefined
-  void DMA_COMInit(USART_InitTypeDef* USART_InitStruct)
-..\Src\virtualComPort.c(262): error:  #20: identifier "GPIO_InitTypeDef" is undefined
-    GPIO_InitTypeDef GPIO_InitStructure;
-..\Src\virtualComPort.c(264): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
-    VCP_USART_GPIO_APB_CLK(VCP_USART_GPIO_CLK, ENABLE);
-..\Src\virtualComPort.c(264): error:  #20: identifier "RCC_APB2Periph_GPIOA" is undefined
-    VCP_USART_GPIO_APB_CLK(VCP_USART_GPIO_CLK, ENABLE);
-..\Src\virtualComPort.c(267): error:  #20: identifier "RCC_APB2Periph_USART1" is undefined
-    VCP_USART_APB_CLK(VCP_USART_CLK, ENABLE); 
-..\Src\virtualComPort.c(270): error:  #20: identifier "GPIO_Mode_AF_PP" is undefined
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-..\Src\virtualComPort.c(271): error:  #20: identifier "GPIO_Pin_9" is undefined
-    GPIO_InitStructure.GPIO_Pin = VCP_USART_TX_PIN;
-..\Src\virtualComPort.c(272): error:  #20: identifier "GPIO_Speed_10MHz" is undefined
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
-..\Src\virtualComPort.c(273): warning:  #223-D: function "GPIO_Init" declared implicitly
-    GPIO_Init(GPIOA, &GPIO_InitStructure);
-..\Src\virtualComPort.c(276): error:  #20: identifier "GPIO_Mode_IN_FLOATING" is undefined
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-..\Src\virtualComPort.c(277): error:  #20: identifier "GPIO_Pin_10" is undefined
-    GPIO_InitStructure.GPIO_Pin = VCP_USART_RX_PIN;
-..\Src\virtualComPort.c(283): warning:  #223-D: function "USART_Init" declared implicitly
-    USART_Init(VCP_USART, USART_InitStruct);
-..\Src\virtualComPort.c(387): error:  #20: identifier "USART_WordLength_8b" is undefined
-    USART_InitStructure.USART_WordLength = USART_WordLength_8b;
-..\Src\virtualComPort.c(388): error:  #20: identifier "USART_StopBits_1" is undefined
-    USART_InitStructure.USART_StopBits = USART_StopBits_1;
-..\Src\virtualComPort.c(389): error:  #20: identifier "USART_Parity_Odd" is undefined
-    USART_InitStructure.USART_Parity = USART_Parity_Odd;
-..\Src\virtualComPort.c(390): error:  #20: identifier "USART_HardwareFlowControl_None" is undefined
-    USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
-..\Src\virtualComPort.c(391): error:  #20: identifier "USART_Mode_Rx" is undefined
-    USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
-..\Src\virtualComPort.c(391): error:  #20: identifier "USART_Mode_Tx" is undefined
-    USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
-..\Src\virtualComPort.c(395): warning:  #223-D: function "USART_ITConfig" declared implicitly
-    USART_ITConfig(EVAL_COM1, USART_IT_RXNE, ENABLE);
-..\Src\virtualComPort.c(395): error:  #20: identifier "USART_IT_RXNE" is undefined
-    USART_ITConfig(EVAL_COM1, USART_IT_RXNE, ENABLE);
-..\Src\virtualComPort.c(413): error:  #20: identifier "USART_StopBits_1" is undefined
-        USART_InitStructure.USART_StopBits = USART_StopBits_1;
-..\Src\virtualComPort.c(416): error:  #20: identifier "USART_StopBits_1_5" is undefined
-        USART_InitStructure.USART_StopBits = USART_StopBits_1_5;
-..\Src\virtualComPort.c(419): error:  #20: identifier "USART_StopBits_2" is undefined
-        USART_InitStructure.USART_StopBits = USART_StopBits_2;
-..\Src\virtualComPort.c(432): error:  #20: identifier "USART_Parity_No" is undefined
-        USART_InitStructure.USART_Parity = USART_Parity_No;
-..\Src\virtualComPort.c(435): error:  #20: identifier "USART_Parity_Even" is undefined
-        USART_InitStructure.USART_Parity = USART_Parity_Even;
-..\Src\virtualComPort.c(438): error:  #20: identifier "USART_Parity_Odd" is undefined
-        USART_InitStructure.USART_Parity = USART_Parity_Odd;
-..\Src\virtualComPort.c(452): error:  #20: identifier "USART_WordLength_8b" is undefined
-        USART_InitStructure.USART_WordLength = USART_WordLength_8b;
-..\Src\virtualComPort.c(455): error:  #20: identifier "USART_Parity_No" is undefined
-        if (USART_InitStructure.USART_Parity == USART_Parity_No)
-..\Src\virtualComPort.c(461): error:  #20: identifier "USART_WordLength_9b" is undefined
-          USART_InitStructure.USART_WordLength = USART_WordLength_9b;
-..\Src\virtualComPort.c(473): error:  #20: identifier "USART_HardwareFlowControl_None" is undefined
-    USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
-..\Src\virtualComPort.c(474): error:  #20: identifier "USART_Mode_Rx" is undefined
-    USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
-..\Src\virtualComPort.c: 4 warnings, 30 errors
 compiling system_stm32f1xx.c...
 compiling stm32f1xx_hal_uart.c...
-".\output\motor_controller.axf" - 55 Error(s), 12 Warning(s).
+linking...
+Program Size: Code=10360 RO-data=292 RW-data=52 ZI-data=3308  
+FromELF: creating hex file...
+".\output\motor_controller.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -222,7 +78,6 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.1.1
-Target not created.
 Build Time Elapsed:  00:00:07
 </pre>
 </body>

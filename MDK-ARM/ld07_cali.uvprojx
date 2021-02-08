@@ -416,11 +416,6 @@
               <FileType>1</FileType>
               <FilePath>..\Src\tim.c</FilePath>
             </File>
-            <File>
-              <FileName>hw_config.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\hw_config.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -530,41 +525,6 @@
               <FileName>pro_v2.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\protocol\pro_v2.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>STM32_USB_Device_Library</GroupName>
-          <Files>
-            <File>
-              <FileName>usb_desc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\usb_desc.c</FilePath>
-            </File>
-            <File>
-              <FileName>usb_endp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\usb_endp.c</FilePath>
-            </File>
-            <File>
-              <FileName>usb_istr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\usb_istr.c</FilePath>
-            </File>
-            <File>
-              <FileName>usb_prop.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\usb_prop.c</FilePath>
-            </File>
-            <File>
-              <FileName>usb_pwr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\usb_pwr.c</FilePath>
-            </File>
-            <File>
-              <FileName>virtualComPort.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\virtualComPort.c</FilePath>
             </File>
           </Files>
         </Group>

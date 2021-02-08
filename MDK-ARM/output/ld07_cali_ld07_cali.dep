@@ -172,33 +172,6 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6020A9A6)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x6020A9A5)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x6020A9A6)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x6020A9A5)
-F (..\Src\hw_config.c)(0x6020AF7E)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\protocol -I ..\Middlewares\STM32_USB-FS-Device_Driver\inc -I ..\Middlewares\STM32_EVAL\Common -I ..\Middlewares\STM32_EVAL\STM3210E_EVAL-I.\RTE\_ld07_cali-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\output\hw_config.o --omf_browse .\output\hw_config.crf --depend .\output\hw_config.d)
-I (../Inc/stm32f1xx_it.h)(0x6020A9A8)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_lib.h)(0x5943A15B)
-I (../Inc/hw_config.h)(0x5943A15B)
-I (../Inc/platform_config.h)(0x6020B0A9)
-I (..\Middlewares\STM32_EVAL\STM3210E_EVAL\stm3210e_eval.h)(0x50FD47EB)
-I (D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include\stm32f10x.h)(0x53BA0D60)
-I (.\RTE\_ld07_cali\RTE_Components.h)(0x6020A9DF)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6020A9A4)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6020A9A4)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6020A9A4)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6020A9A4)
-I (D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\Middlewares\STM32_EVAL\Common\stm32_eval_legacy.h)(0x4F66F6AF)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_type.h)(0x5943A15B)
-I (../Inc/usb_conf.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_def.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_init.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_sil.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_int.h)(0x5943A15B)
-I (../Inc/usb_prop.h)(0x5943A15B)
-I (../Inc/usb_desc.h)(0x5943A15B)
-I (../Inc/usb_pwr.h)(0x5943A15B)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c)(0x6020A9A6)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\protocol -I ..\Middlewares\STM32_USB-FS-Device_Driver\inc -I ..\Middlewares\STM32_EVAL\Common -I ..\Middlewares\STM32_EVAL\STM3210E_EVAL-I.\RTE\_ld07_cali-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\output\stm32f1xx_hal_gpio_ex.o --omf_browse .\output\stm32f1xx_hal_gpio_ex.crf --depend .\output\stm32f1xx_hal_gpio_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6020A9A5)
 I (../Inc/stm32f1xx_hal_conf.h)(0x6020A9A8)
@@ -744,155 +717,3 @@ I (..\protocol\pro_v2.h)(0x6020A9A8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-F (..\Src\usb_desc.c)(0x5943A15B)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\protocol -I ..\Middlewares\STM32_USB-FS-Device_Driver\inc -I ..\Middlewares\STM32_EVAL\Common -I ..\Middlewares\STM32_EVAL\STM3210E_EVAL-I.\RTE\_ld07_cali-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\output\usb_desc.o --omf_browse .\output\usb_desc.crf --depend .\output\usb_desc.d)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_lib.h)(0x5943A15B)
-I (../Inc/hw_config.h)(0x5943A15B)
-I (../Inc/platform_config.h)(0x6020B0A9)
-I (..\Middlewares\STM32_EVAL\STM3210E_EVAL\stm3210e_eval.h)(0x50FD47EB)
-I (D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include\stm32f10x.h)(0x53BA0D60)
-I (.\RTE\_ld07_cali\RTE_Components.h)(0x6020A9DF)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6020A9A4)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6020A9A4)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6020A9A4)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6020A9A4)
-I (D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\Middlewares\STM32_EVAL\Common\stm32_eval_legacy.h)(0x4F66F6AF)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_type.h)(0x5943A15B)
-I (../Inc/usb_conf.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_def.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_init.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_sil.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_int.h)(0x5943A15B)
-I (../Inc/usb_desc.h)(0x5943A15B)
-F (..\Src\usb_endp.c)(0x5943A15B)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\protocol -I ..\Middlewares\STM32_USB-FS-Device_Driver\inc -I ..\Middlewares\STM32_EVAL\Common -I ..\Middlewares\STM32_EVAL\STM3210E_EVAL-I.\RTE\_ld07_cali-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\output\usb_endp.o --omf_browse .\output\usb_endp.crf --depend .\output\usb_endp.d)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_lib.h)(0x5943A15B)
-I (../Inc/hw_config.h)(0x5943A15B)
-I (../Inc/platform_config.h)(0x6020B0A9)
-I (..\Middlewares\STM32_EVAL\STM3210E_EVAL\stm3210e_eval.h)(0x50FD47EB)
-I (D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include\stm32f10x.h)(0x53BA0D60)
-I (.\RTE\_ld07_cali\RTE_Components.h)(0x6020A9DF)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6020A9A4)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6020A9A4)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6020A9A4)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6020A9A4)
-I (D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\Middlewares\STM32_EVAL\Common\stm32_eval_legacy.h)(0x4F66F6AF)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_type.h)(0x5943A15B)
-I (../Inc/usb_conf.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_def.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_init.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_sil.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_int.h)(0x5943A15B)
-I (../Inc/usb_desc.h)(0x5943A15B)
-I (../Inc/usb_istr.h)(0x5943A15B)
-I (../Inc/usb_pwr.h)(0x5943A15B)
-F (..\Src\usb_istr.c)(0x5943A15B)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\protocol -I ..\Middlewares\STM32_USB-FS-Device_Driver\inc -I ..\Middlewares\STM32_EVAL\Common -I ..\Middlewares\STM32_EVAL\STM3210E_EVAL-I.\RTE\_ld07_cali-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\output\usb_istr.o --omf_browse .\output\usb_istr.crf --depend .\output\usb_istr.d)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_lib.h)(0x5943A15B)
-I (../Inc/hw_config.h)(0x5943A15B)
-I (../Inc/platform_config.h)(0x6020B0A9)
-I (..\Middlewares\STM32_EVAL\STM3210E_EVAL\stm3210e_eval.h)(0x50FD47EB)
-I (D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include\stm32f10x.h)(0x53BA0D60)
-I (.\RTE\_ld07_cali\RTE_Components.h)(0x6020A9DF)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6020A9A4)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6020A9A4)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6020A9A4)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6020A9A4)
-I (D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\Middlewares\STM32_EVAL\Common\stm32_eval_legacy.h)(0x4F66F6AF)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_type.h)(0x5943A15B)
-I (../Inc/usb_conf.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_def.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_init.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_sil.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_int.h)(0x5943A15B)
-I (../Inc/usb_prop.h)(0x5943A15B)
-I (../Inc/usb_pwr.h)(0x5943A15B)
-I (../Inc/usb_istr.h)(0x5943A15B)
-F (..\Src\usb_prop.c)(0x5943A15B)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\protocol -I ..\Middlewares\STM32_USB-FS-Device_Driver\inc -I ..\Middlewares\STM32_EVAL\Common -I ..\Middlewares\STM32_EVAL\STM3210E_EVAL-I.\RTE\_ld07_cali-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\output\usb_prop.o --omf_browse .\output\usb_prop.crf --depend .\output\usb_prop.d)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_lib.h)(0x5943A15B)
-I (../Inc/hw_config.h)(0x5943A15B)
-I (../Inc/platform_config.h)(0x6020B0A9)
-I (..\Middlewares\STM32_EVAL\STM3210E_EVAL\stm3210e_eval.h)(0x50FD47EB)
-I (D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include\stm32f10x.h)(0x53BA0D60)
-I (.\RTE\_ld07_cali\RTE_Components.h)(0x6020A9DF)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6020A9A4)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6020A9A4)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6020A9A4)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6020A9A4)
-I (D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\Middlewares\STM32_EVAL\Common\stm32_eval_legacy.h)(0x4F66F6AF)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_type.h)(0x5943A15B)
-I (../Inc/usb_conf.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_def.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_init.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_sil.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_int.h)(0x5943A15B)
-I (../Inc/usb_prop.h)(0x5943A15B)
-I (../Inc/usb_desc.h)(0x5943A15B)
-I (../Inc/usb_pwr.h)(0x5943A15B)
-F (..\Src\usb_pwr.c)(0x5943A15B)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\protocol -I ..\Middlewares\STM32_USB-FS-Device_Driver\inc -I ..\Middlewares\STM32_EVAL\Common -I ..\Middlewares\STM32_EVAL\STM3210E_EVAL-I.\RTE\_ld07_cali-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\output\usb_pwr.o --omf_browse .\output\usb_pwr.crf --depend .\output\usb_pwr.d)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_lib.h)(0x5943A15B)
-I (../Inc/hw_config.h)(0x5943A15B)
-I (../Inc/platform_config.h)(0x6020B0A9)
-I (..\Middlewares\STM32_EVAL\STM3210E_EVAL\stm3210e_eval.h)(0x50FD47EB)
-I (D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include\stm32f10x.h)(0x53BA0D60)
-I (.\RTE\_ld07_cali\RTE_Components.h)(0x6020A9DF)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6020A9A4)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6020A9A4)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6020A9A4)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6020A9A4)
-I (D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\Middlewares\STM32_EVAL\Common\stm32_eval_legacy.h)(0x4F66F6AF)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_type.h)(0x5943A15B)
-I (../Inc/usb_conf.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_def.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_init.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_sil.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_int.h)(0x5943A15B)
-I (../Inc/usb_pwr.h)(0x5943A15B)
-F (..\Src\virtualComPort.c)(0x5943A15B)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\protocol -I ..\Middlewares\STM32_USB-FS-Device_Driver\inc -I ..\Middlewares\STM32_EVAL\Common -I ..\Middlewares\STM32_EVAL\STM3210E_EVAL-I.\RTE\_ld07_cali-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\output\virtualcomport.o --omf_browse .\output\virtualcomport.crf --depend .\output\virtualcomport.d)
-I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_lib.h)(0x5943A15B)
-I (../Inc/hw_config.h)(0x5943A15B)
-I (../Inc/platform_config.h)(0x6020B0A9)
-I (..\Middlewares\STM32_EVAL\STM3210E_EVAL\stm3210e_eval.h)(0x50FD47EB)
-I (D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include\stm32f10x.h)(0x53BA0D60)
-I (.\RTE\_ld07_cali\RTE_Components.h)(0x6020A9DF)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6020A9A4)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6020A9A4)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6020A9A4)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6020A9A4)
-I (D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\Middlewares\STM32_EVAL\Common\stm32_eval_legacy.h)(0x4F66F6AF)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_type.h)(0x5943A15B)
-I (../Inc/usb_conf.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_regs.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_def.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_core.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_init.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_sil.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_mem.h)(0x5943A15B)
-I (..\Middlewares\STM32_USB-FS-Device_Driver\inc\usb_int.h)(0x5943A15B)
-I (../Inc/usb_prop.h)(0x5943A15B)
-I (../Inc/usb_desc.h)(0x5943A15B)
