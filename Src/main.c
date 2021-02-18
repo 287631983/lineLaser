@@ -207,7 +207,6 @@ uint8_t test_sw;
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
- static uint8_t temp[] = "hello";
   while (1)
   {
       if(CommConfig.pack.data_id != PACK_NULL)
@@ -287,15 +286,13 @@ uint8_t test_sw;
 		FIFO_popData(&usartRecvFIFO, UartSendBuffer, uartSendlen);
 		CDC_Transmit_FS(UartSendBuffer, uartSendlen);
 	  }
-//	  if (uartSendOneFrame)
-//	  {
-//		uartSendOneFrame = 0;
-//		uartSendlen = FIFO_getDataLength(&usartSendFIFO);
-//		FIFO_popData(&usartSendFIFO, UartSendBuffer, uartSendlen);
-//		HAL_UART_Transmit_DMA(&huart3,UartSendBuffer,uartSendlen);
-//	  }
-	  HAL_UART_Transmit_DMA(&huart3,temp,sizeof(temp));
-	  HAL_Delay(100);
+	  if (uartSendOneFrame)
+	  {
+		uartSendOneFrame = 0;
+		uartSendlen = FIFO_getDataLength(&usartSendFIFO);
+		FIFO_popData(&usartSendFIFO, UartSendBuffer, uartSendlen);
+		HAL_UART_Transmit(&huart3,UartSendBuffer,uartSendlen, 100);
+	  }
 		Comm_RecProcess();
 		Motor_GetPos(); 
 		Motor_LimitSwitch(); 
