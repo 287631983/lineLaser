@@ -20,6 +20,10 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "usb_device.h"
+#include "usart_fifo.h"
+#include "usbd_cdc_if.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "pro_v2.h"
@@ -52,9 +56,17 @@ uint8_t TxBuffer[1024];
 /* Private variables ---------------------------------------------------------*/
 UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
+UART_HandleTypeDef huart3;
 DMA_HandleTypeDef hdma_usart1_rx;
 DMA_HandleTypeDef hdma_usart2_rx;
-
+DMA_HandleTypeDef hdma_usart3_rx;
+DMA_HandleTypeDef hdma_usart3_tx;
+extern uint8_t UartDMAReveiveBuffer[UART_DMA_RECEIVE_LENGTH];
+extern uint8_t UartSendBuffer[UART_SEND_LENGTH];
+extern uint8_t uartRecvOneFrame;
+extern uint8_t uartSendOneFrame;
+extern USART_FIFO usartRecvFIFO;
+extern USART_FIFO usartSendFIFO;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -63,6 +75,7 @@ static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_USART2_UART_Init(void);
+void MX_USART3_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -150,7 +163,7 @@ uint8_t test_sw;
   int main(void)
   {
   /* USER CODE BEGIN 1 */
-
+	uint16_t uartSendlen = 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -181,6 +194,10 @@ uint8_t test_sw;
 
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
+  MX_USART3_UART_Init();
+  MX_USB_DEVICE_Init();
+  FIFO_init(&usartRecvFIFO);
+  FIFO_init(&usartSendFIFO);
   /* USER CODE BEGIN 2 */
   HAL_UART_Receive_DMA(&huart1, RxBuffer1, RX_BUFFER_SIZE);
   memset(&CommConfig, 0, sizeof(CommConfig));
@@ -190,6 +207,7 @@ uint8_t test_sw;
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+ static uint8_t temp[] = "hello";
   while (1)
   {
       if(CommConfig.pack.data_id != PACK_NULL)
@@ -262,10 +280,25 @@ uint8_t test_sw;
 
           CommConfig.pack.data_id = PACK_NULL;
       }
-
-      Comm_RecProcess();
-      Motor_GetPos(); 
-      Motor_LimitSwitch(); 
+	  if (uartRecvOneFrame)
+	  {
+        uartRecvOneFrame = 0;
+		uartSendlen = FIFO_getDataLength(&usartRecvFIFO);
+		FIFO_popData(&usartRecvFIFO, UartSendBuffer, uartSendlen);
+		CDC_Transmit_FS(UartSendBuffer, uartSendlen);
+	  }
+//	  if (uartSendOneFrame)
+//	  {
+//		uartSendOneFrame = 0;
+//		uartSendlen = FIFO_getDataLength(&usartSendFIFO);
+//		FIFO_popData(&usartSendFIFO, UartSendBuffer, uartSendlen);
+//		HAL_UART_Transmit_DMA(&huart3,UartSendBuffer,uartSendlen);
+//	  }
+	  HAL_UART_Transmit_DMA(&huart3,temp,sizeof(temp));
+	  HAL_Delay(100);
+		Comm_RecProcess();
+		Motor_GetPos(); 
+		Motor_LimitSwitch(); 
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
@@ -382,7 +415,45 @@ static void MX_USART2_UART_Init(void)
   /* USER CODE END USART2_Init 2 */
 
 }
+void MX_USART3_UART_Init(void)
+{
+  /* USER CODE BEGIN USART3_Init 0 */
+  /* USER CODE END USART3_Init 0 */
+  /* USER CODE BEGIN USART3_Init 1 */
+  /* USER CODE END USART3_Init 1 */
+  huart3.Instance = USART3;
+  huart3.Init.BaudRate = 115200;
+  huart3.Init.WordLength = UART_WORDLENGTH_8B;
+  huart3.Init.StopBits = UART_STOPBITS_1;
+  huart3.Init.Parity = UART_PARITY_NONE;
+  huart3.Init.Mode = UART_MODE_TX_RX;
+  huart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart3.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart3) != HAL_OK)
+  /* USER CODE BEGIN USART3_Init 2 */
+	HAL_NVIC_EnableIRQ(USART3_IRQn);
+	HAL_NVIC_SetPriority(USART3_IRQn,3,3);
+	__HAL_UART_ENABLE_IT(&huart3,UART_IT_IDLE);//¿ÕÏÐÖÐ¶Ï
+	HAL_UART_Receive_DMA(&huart3,UartDMAReveiveBuffer,UART_DMA_RECEIVE_LENGTH);
+  /* USER CODE END USART3_Init 2 */
 
+}
+
+void MX_USART_Init(UART_HandleTypeDef *usart)
+{
+	usart->Instance = USART3;
+	usart->Init.Mode = UART_MODE_TX_RX;
+	usart->Init.HwFlowCtl = UART_HWCONTROL_NONE;
+	usart->Init.OverSampling = UART_OVERSAMPLING_16;
+	if (HAL_UART_Init(usart) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	HAL_NVIC_EnableIRQ(USART3_IRQn);
+	HAL_NVIC_SetPriority(USART3_IRQn,3,3);
+	__HAL_UART_ENABLE_IT(&huart3,UART_IT_IDLE);//¿ÕÏÐÖÐ¶Ï
+	HAL_UART_Receive_DMA(&huart3,UartDMAReveiveBuffer,UART_DMA_RECEIVE_LENGTH);
+}
 /** 
   * Enable DMA controller clock
   */
@@ -399,7 +470,12 @@ static void MX_DMA_Init(void)
   /* DMA1_Channel6_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel6_IRQn, 1, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel6_IRQn);
-
+/* DMA1_Channel2_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);
+  /* DMA1_Channel3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel3_IRQn);
 }
 
 /**
@@ -414,6 +490,7 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */

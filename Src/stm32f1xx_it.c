@@ -22,6 +22,8 @@
 #include "main.h"
 #include "stm32f1xx_it.h"
 #include "control.h"
+#include "usart_fifo.h"
+#include "usbd_cdc_if.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 /* USER CODE END Includes */
@@ -60,6 +62,14 @@
 extern DMA_HandleTypeDef hdma_usart1_rx;
 extern DMA_HandleTypeDef hdma_usart2_rx;
 extern TIM_HandleTypeDef htim4;
+extern PCD_HandleTypeDef hpcd_USB_FS;
+extern DMA_HandleTypeDef hdma_usart3_rx;
+extern DMA_HandleTypeDef hdma_usart3_tx;
+extern UART_HandleTypeDef huart3;
+extern USART_FIFO usartRecvFIFO;
+extern USART_FIFO usartSendFIFO;
+extern uint8_t UartDMAReveiveBuffer[UART_DMA_RECEIVE_LENGTH];
+extern uint8_t UartDMASendBuffer[UART_DMA_SEND_LENGTH];
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -227,7 +237,58 @@ void DMA1_Channel6_IRQHandler(void)
 
   /* USER CODE END DMA1_Channel6_IRQn 1 */
 }
+void DMA1_Channel2_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Channel2_IRQn 0 */
 
+  /* USER CODE END DMA1_Channel2_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_usart3_tx);
+  /* USER CODE BEGIN DMA1_Channel2_IRQn 1 */
+
+  /* USER CODE END DMA1_Channel2_IRQn 1 */
+}
+void DMA1_Channel3_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Channel3_IRQn 0 */
+
+  /* USER CODE END DMA1_Channel3_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_usart3_rx);
+  /* USER CODE BEGIN DMA1_Channel3_IRQn 1 */
+
+  /* USER CODE END DMA1_Channel3_IRQn 1 */
+}
+void USB_LP_CAN1_RX0_IRQHandler(void)
+{
+  /* USER CODE BEGIN USB_LP_CAN1_RX0_IRQn 0 */
+
+  /* USER CODE END USB_LP_CAN1_RX0_IRQn 0 */
+  HAL_PCD_IRQHandler(&hpcd_USB_FS);
+  /* USER CODE BEGIN USB_LP_CAN1_RX0_IRQn 1 */
+
+  /* USER CODE END USB_LP_CAN1_RX0_IRQn 1 */
+}
+
+uint8_t uartRecvOneFrame = 0;
+uint8_t uartSendOneFrame = 0;
+void USART3_IRQHandler(void)
+{
+	uint16_t recvLen = 0;
+	
+	HAL_UART_IRQHandler(&huart3);
+	
+	if(__HAL_UART_GET_FLAG(&huart3,UART_FLAG_IDLE) != RESET)
+	{
+		__HAL_UART_CLEAR_IDLEFLAG(&huart3);
+		HAL_UART_DMAStop(&huart3);
+		recvLen = UART_DMA_RECEIVE_LENGTH - __HAL_DMA_GET_COUNTER(&hdma_usart3_rx);
+		if (recvLen)
+		{
+			FIFO_pushData(&usartRecvFIFO, UartDMAReveiveBuffer, recvLen);
+			uartRecvOneFrame = 1;
+		}
+		HAL_UART_Receive_DMA(&huart3,UartDMAReveiveBuffer,UART_DMA_RECEIVE_LENGTH);
+	}
+}
 void TIM4_IRQHandler(void)
 {
   HAL_TIM_IRQHandler(&htim4);

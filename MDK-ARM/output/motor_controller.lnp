@@ -5,6 +5,11 @@
 ".\output\stm32f1xx_it.o"
 ".\output\stm32f1xx_hal_msp.o"
 ".\output\tim.o"
+".\output\usart_fifo.o"
+".\output\usb_device.o"
+".\output\usbd_cdc_if.o"
+".\output\usbd_conf.o"
+".\output\usbd_desc.o"
 ".\output\stm32f1xx_hal_gpio_ex.o"
 ".\output\stm32f1xx_hal_pcd.o"
 ".\output\stm32f1xx_hal_pcd_ex.o"
@@ -24,6 +29,10 @@
 ".\output\stm32f1xx_hal_uart.o"
 ".\output\system_stm32f1xx.o"
 ".\output\pro_v2.o"
+".\output\usbd_cdc.o"
+".\output\usbd_core.o"
+".\output\usbd_ctlreq.o"
+".\output\usbd_ioreq.o"
 --library_type=microlib --strict --scatter ".\output\motor_controller.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

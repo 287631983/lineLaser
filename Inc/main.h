@@ -53,7 +53,7 @@ void Comm_SendData(uint8_t data_id, uint8_t *in_buf, uint32_t in_len);
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
-
+void MX_USART_Init(UART_HandleTypeDef *usart);
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
